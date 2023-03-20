@@ -10,6 +10,7 @@ import Foundation
 
 
 struct Quiz{
+    
     var currentQuestionIndex: Int
     var quizModel: QuizModel
     var quizCompleted : Bool = false
@@ -18,11 +19,28 @@ struct Quiz{
 
 
 struct QuizModel{
+    
     var question: String
     var answer: String
     var optionsList : [QuizOption]
     var points : Int
     var level : String
+    
+    init(with data: QuizJsonData) {
+        self.question = data.question ?? ""
+        self.answer = data.answer ?? ""
+        self.optionsList = data.options.map({ items -> [QuizOption] in
+            var tempArray: [QuizOption]
+            tempArray = items.map{ item -> QuizOption in
+                var temp: QuizOption =  QuizOption(with: item)
+                return temp
+            }
+            return tempArray
+        }) ?? []
+        self.points = data.points
+        self.level = data.level ?? ""
+
+    }
     
 }
 
@@ -32,4 +50,10 @@ struct QuizOption : Identifiable{
     var option :  String
     var isSelected : Bool = false
     var isMatched : Bool = false
+    
+    init(with options: OptionItems) {
+        self.id = options.id ?? 1212
+        self.optionId = options.optionId ?? ""
+        self.option = options.option ?? ""
+    }
 }

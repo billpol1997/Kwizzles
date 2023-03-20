@@ -8,7 +8,9 @@
 import SwiftUI
 import Foundation
 
-class GameManagerVM : ObservableObject {
+class GameViewModel : ObservableObject {
+    
+    typealias quiz = QuizData
     
     //MARK: Vars
     static var currentIndex = 0
@@ -16,12 +18,13 @@ class GameManagerVM : ObservableObject {
     @State var pressed : Bool = false
     @State var timeRunning = false
     @Published var totalPoints : Int = 0
+
     
     static func createGameModel(i:Int) ->Quiz {
-        return Quiz(currentQuestionIndex: i, quizModel: QuizData[i])
+        return Quiz(currentQuestionIndex: i, quizModel: quiz().randomizeQuestions()[i]) // QuizData[i]
     }
     
-    @Published var model = GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
+    @Published var model = GameViewModel.createGameModel(i: GameViewModel.currentIndex)
     
     var timer = Timer()
     var maxProgress = 15
@@ -59,18 +62,18 @@ class GameManagerVM : ObservableObject {
     
     //MARK: Restart
     func restartGame() {
-        GameManagerVM.currentIndex = 0
+        GameViewModel.currentIndex = 0
         totalPoints = 0
-        model = GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
+        model = GameViewModel.createGameModel(i: GameViewModel.currentIndex)
         self.startTimer()
     }
     
     func nextQ(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            if (GameManagerVM.currentIndex < QuizData.count - 1  ) {             // max thesi - 1 gia na doulepsei
-                GameManagerVM.currentIndex = GameManagerVM.currentIndex + 1
+            if (GameViewModel.currentIndex < 19  ) {             // max thesi - 1 gia na doulepsei, QuizData.count - 1,quiz().data.count - 1
+                GameViewModel.currentIndex = GameViewModel.currentIndex + 1
                 self.resetTimer()
-                self.model = GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
+                self.model = GameViewModel.createGameModel(i: GameViewModel.currentIndex)
             } else {
                 self.model.quizCompleted = true
                 //self.model.quizWinningStatus = true

@@ -41,8 +41,8 @@ struct BaseQuestionContainer: View {
     var question: some View{
         VStack(alignment: .center){
             Text(level ?? "")
-                .customFont(.chalkBold, .mediumFont)
-                .foregroundStyle(LinearGradient(colors: [Color.theme.FadeGrey,.purple,Color.theme.FadePurple], startPoint: .leading, endPoint: .trailing))
+                .customFont(.impact, .mediumFont)
+                .foregroundStyle(LinearGradient(colors: [.white,Color.theme.FadeGrey], startPoint: .top, endPoint: .bottom))
             Text(text)
                 .customFont(.arial, .mediumMaxFont)
                 .foregroundColor(.white)

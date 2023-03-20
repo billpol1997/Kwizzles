@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameView: View {
-    @ObservedObject var manager : GameManagerVM
+    @ObservedObject var manager : GameViewModel
     var body: some View {
         ZStack{
             Image(.KwizzlesBackground)
@@ -28,6 +28,7 @@ struct GameView: View {
             toolbar
             Spacer()
             timer
+                .customPadding(.vertical, .timerVerticalPadding)
             Spacer()
             QuestionsGridView(manager: manager)
         }
@@ -74,9 +75,9 @@ struct GameView: View {
             .foregroundColor(Color.theme.BrightWhite)
             Spacer()
             Group{
-                Text(String(GameManagerVM.currentIndex))
+                Text(String(GameViewModel.currentIndex))
                 Text("/")
-                Text(String(GameManagerVM.maxIndex))
+                Text(String(GameViewModel.maxIndex))
             }
             .customFont(.chalkBold, .smallFont)
             .foregroundColor(Color.theme.FadeGrey)
@@ -87,6 +88,6 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView( manager: GameManagerVM())
+        GameView( manager: GameViewModel())
     }
 }

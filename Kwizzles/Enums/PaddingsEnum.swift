@@ -15,6 +15,7 @@ enum PaddingEnum{
     case gameHorizontalPadding
     case gameVerticalPadding
     case questionContainerMiddlePadding
+    case timerVerticalPadding
     
     var padding: CGFloat{
         switch self{
@@ -22,6 +23,8 @@ enum PaddingEnum{
             return 10
         case .playButtonInnerBottomPadding:
             return 10
+        case .timerVerticalPadding:
+            return 17
         case .welcomeScreenTextsPadding:
             return 28
         case .welcomeScreenTextsPaddingAlt:

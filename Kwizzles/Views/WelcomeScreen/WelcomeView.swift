@@ -11,7 +11,7 @@ struct WelcomeView: View {
     @State var isPressAnimated : Bool = false
     @State var isTitleAnimated : Bool = false
     @ObservedObject var viewModel = WelcomeViewModel()
-    @ObservedObject var manager = GameManagerVM()
+    @ObservedObject var manager = GameViewModel()
     var body: some View {
         ZStack{
             Image(.KwizzlesBackground)

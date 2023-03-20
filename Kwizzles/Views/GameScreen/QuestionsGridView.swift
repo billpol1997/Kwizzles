@@ -10,7 +10,7 @@ import Foundation
 
 struct QuestionsGridView : View{
     
-    var manager : GameManagerVM
+    var manager : GameViewModel
     var columns : [GridItem] = Array(repeating: GridItem(.fixed(190),spacing: 0), count: 2)
     @State var text : String = " "
     

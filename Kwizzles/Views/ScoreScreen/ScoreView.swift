@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ScoreView: View {
     @State var isAnimating : Bool = false
-    @ObservedObject var manager : GameManagerVM
+    @ObservedObject var manager : GameViewModel
     var body: some View {
         ZStack{
             Image(.KwizzlesBackground)
@@ -76,6 +76,6 @@ struct ScoreView: View {
 
 struct ScoreView_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreView(manager: GameManagerVM())
+        ScoreView(manager: GameViewModel())
     }
 }

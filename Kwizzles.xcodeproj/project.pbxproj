@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9653D8729BD14620029FDAF /* KwizzlesQnA1.json in Resources */ = {isa = PBXBuildFile; fileRef = A9653D8629BD14620029FDAF /* KwizzlesQnA1.json */; };
+		A9653D8929BD14B60029FDAF /* QnAResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9653D8829BD14B60029FDAF /* QnAResponse.swift */; };
+		A9653D8C29BD16870029FDAF /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9653D8B29BD16870029FDAF /* QuizManager.swift */; };
 		D757346E291C121C00A177C4 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D757346D291C121C00A177C4 /* WelcomeViewModel.swift */; };
 		D78543C529250469002812F7 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78543C429250469002812F7 /* QuizModel.swift */; };
-		D78543C729250671002812F7 /* GameManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78543C629250671002812F7 /* GameManagerVM.swift */; };
+		D78543C729250671002812F7 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78543C629250671002812F7 /* GameViewModel.swift */; };
 		D78543CA292507CE002812F7 /* QuizData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78543C9292507CE002812F7 /* QuizData.swift */; };
 		D78543CD29250ECE002812F7 /* QuestionsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78543CC29250ECE002812F7 /* QuestionsGridView.swift */; };
 		D7D393AD291B1D8300EADEE2 /* KwizzlesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D393AC291B1D8300EADEE2 /* KwizzlesApp.swift */; };
@@ -61,9 +64,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A9653D8629BD14620029FDAF /* KwizzlesQnA1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KwizzlesQnA1.json; sourceTree = "<group>"; };
+		A9653D8829BD14B60029FDAF /* QnAResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAResponse.swift; sourceTree = "<group>"; };
+		A9653D8B29BD16870029FDAF /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		D757346D291C121C00A177C4 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		D78543C429250469002812F7 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
-		D78543C629250671002812F7 /* GameManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerVM.swift; sourceTree = "<group>"; };
+		D78543C629250671002812F7 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		D78543C9292507CE002812F7 /* QuizData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizData.swift; sourceTree = "<group>"; };
 		D78543CC29250ECE002812F7 /* QuestionsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsGridView.swift; sourceTree = "<group>"; };
 		D7D393A9291B1D8300EADEE2 /* Kwizzles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kwizzles.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,10 +131,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9653D8A29BD163D0029FDAF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A9653D8B29BD16870029FDAF /* QuizManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		D78543C329250432002812F7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				D78543C429250469002812F7 /* QuizModel.swift */,
+				A9653D8829BD14B60029FDAF /* QnAResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -172,8 +187,10 @@
 		D7D393AB291B1D8300EADEE2 /* Kwizzles */ = {
 			isa = PBXGroup;
 			children = (
+				A9653D8629BD14620029FDAF /* KwizzlesQnA1.json */,
 				D7D393AC291B1D8300EADEE2 /* KwizzlesApp.swift */,
 				D7D393AE291B1D8300EADEE2 /* ContentView.swift */,
+				A9653D8A29BD163D0029FDAF /* Managers */,
 				D7EEA887291C0496000AC428 /* BaseComponents */,
 				D7D393E9291B256600EADEE2 /* Enums */,
 				D7D393F8291B297E00EADEE2 /* Modifiers */,
@@ -227,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				D757346D291C121C00A177C4 /* WelcomeViewModel.swift */,
-				D78543C629250671002812F7 /* GameManagerVM.swift */,
+				D78543C629250671002812F7 /* GameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -400,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9653D8729BD14620029FDAF /* KwizzlesQnA1.json in Resources */,
 				D7D393B4291B1D8500EADEE2 /* Preview Assets.xcassets in Resources */,
 				D7D393B1291B1D8500EADEE2 /* Assets.xcassets in Resources */,
 			);
@@ -433,6 +451,7 @@
 				D7D393AF291B1D8300EADEE2 /* ContentView.swift in Sources */,
 				D7D39400291B2B6F00EADEE2 /* FontModifier.swift in Sources */,
 				D7F69ABB291D3B1100149FBC /* ScoreView.swift in Sources */,
+				A9653D8929BD14B60029FDAF /* QnAResponse.swift in Sources */,
 				D7DF5164291C6BBA00D8A6D9 /* BaseQuestionContainer.swift in Sources */,
 				D7D393EB291B257E00EADEE2 /* AssetsEnum.swift in Sources */,
 				D7D393F7291B292300EADEE2 /* CGFloat+.swift in Sources */,
@@ -445,11 +464,12 @@
 				D7DF5162291C6A9F00D8A6D9 /* GameView.swift in Sources */,
 				D7D393EF291B277500EADEE2 /* HeightsEnum.swift in Sources */,
 				D7D393E3291B1EB500EADEE2 /* WelcomeView.swift in Sources */,
+				A9653D8C29BD16870029FDAF /* QuizManager.swift in Sources */,
 				D7D393F1291B281300EADEE2 /* PaddingsEnum.swift in Sources */,
 				D7D39404291B2C0F00EADEE2 /* TextEnum.swift in Sources */,
 				D7D393FE291B2A7E00EADEE2 /* FontFamilyEnum.swift in Sources */,
 				D78543C529250469002812F7 /* QuizModel.swift in Sources */,
-				D78543C729250671002812F7 /* GameManagerVM.swift in Sources */,
+				D78543C729250671002812F7 /* GameViewModel.swift in Sources */,
 				D757346E291C121C00A177C4 /* WelcomeViewModel.swift in Sources */,
 				D7EEA88D291C0EAD000AC428 /* LoaderView.swift in Sources */,
 				D7D393AD291B1D8300EADEE2 /* KwizzlesApp.swift in Sources */,
