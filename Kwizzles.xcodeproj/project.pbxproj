@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A918355729E0BB2500442B21 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A918355229E0BB2400442B21 /* correct.mp3 */; };
+		A918355829E0BB2500442B21 /* incorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A918355329E0BB2400442B21 /* incorrect.mp3 */; };
+		A918355929E0BB2500442B21 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A918355429E0BB2500442B21 /* backgroundMusic.mp3 */; };
+		A918355A29E0BB2500442B21 /* tada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A918355529E0BB2500442B21 /* tada.mp3 */; };
+		A918355B29E0BB2500442B21 /* tik.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A918355629E0BB2500442B21 /* tik.mp3 */; };
+		A918355D29E0BB6C00442B21 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A918355C29E0BB6C00442B21 /* SoundManager.swift */; };
+		A918355F29E0BC1800442B21 /* SoundsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A918355E29E0BC1800442B21 /* SoundsEnum.swift */; };
 		A9653D8729BD14620029FDAF /* KwizzlesQnA1.json in Resources */ = {isa = PBXBuildFile; fileRef = A9653D8629BD14620029FDAF /* KwizzlesQnA1.json */; };
 		A9653D8929BD14B60029FDAF /* QnAResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9653D8829BD14B60029FDAF /* QnAResponse.swift */; };
 		A9653D8C29BD16870029FDAF /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9653D8B29BD16870029FDAF /* QuizManager.swift */; };
@@ -64,6 +71,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A918355229E0BB2400442B21 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		A918355329E0BB2400442B21 /* incorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = incorrect.mp3; sourceTree = "<group>"; };
+		A918355429E0BB2500442B21 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		A918355529E0BB2500442B21 /* tada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tada.mp3; sourceTree = "<group>"; };
+		A918355629E0BB2500442B21 /* tik.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tik.mp3; sourceTree = "<group>"; };
+		A918355C29E0BB6C00442B21 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		A918355E29E0BC1800442B21 /* SoundsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsEnum.swift; sourceTree = "<group>"; };
 		A9653D8629BD14620029FDAF /* KwizzlesQnA1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KwizzlesQnA1.json; sourceTree = "<group>"; };
 		A9653D8829BD14B60029FDAF /* QnAResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAResponse.swift; sourceTree = "<group>"; };
 		A9653D8B29BD16870029FDAF /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
@@ -131,10 +145,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A918355129E0BAA900442B21 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A918355429E0BB2500442B21 /* backgroundMusic.mp3 */,
+				A918355229E0BB2400442B21 /* correct.mp3 */,
+				A918355329E0BB2400442B21 /* incorrect.mp3 */,
+				A918355529E0BB2500442B21 /* tada.mp3 */,
+				A918355629E0BB2500442B21 /* tik.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		A9653D8A29BD163D0029FDAF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				A9653D8B29BD16870029FDAF /* QuizManager.swift */,
+				A918355C29E0BB6C00442B21 /* SoundManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -151,6 +178,8 @@
 		D78543C8292507A0002812F7 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A918355129E0BAA900442B21 /* Sounds */,
+				A9653D8629BD14620029FDAF /* KwizzlesQnA1.json */,
 				D78543C9292507CE002812F7 /* QuizData.swift */,
 			);
 			path = Repository;
@@ -187,7 +216,6 @@
 		D7D393AB291B1D8300EADEE2 /* Kwizzles */ = {
 			isa = PBXGroup;
 			children = (
-				A9653D8629BD14620029FDAF /* KwizzlesQnA1.json */,
 				D7D393AC291B1D8300EADEE2 /* KwizzlesApp.swift */,
 				D7D393AE291B1D8300EADEE2 /* ContentView.swift */,
 				A9653D8A29BD163D0029FDAF /* Managers */,
@@ -279,6 +307,7 @@
 				D7D393F4291B28CB00EADEE2 /* FontSizesEnum.swift */,
 				D7D393FD291B2A7E00EADEE2 /* FontFamilyEnum.swift */,
 				D7D39403291B2C0F00EADEE2 /* TextEnum.swift */,
+				A918355E29E0BC1800442B21 /* SoundsEnum.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -417,9 +446,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A918355829E0BB2500442B21 /* incorrect.mp3 in Resources */,
 				A9653D8729BD14620029FDAF /* KwizzlesQnA1.json in Resources */,
+				A918355929E0BB2500442B21 /* backgroundMusic.mp3 in Resources */,
 				D7D393B4291B1D8500EADEE2 /* Preview Assets.xcassets in Resources */,
 				D7D393B1291B1D8500EADEE2 /* Assets.xcassets in Resources */,
+				A918355B29E0BB2500442B21 /* tik.mp3 in Resources */,
+				A918355729E0BB2500442B21 /* correct.mp3 in Resources */,
+				A918355A29E0BB2500442B21 /* tada.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +481,7 @@
 				D78543CD29250ECE002812F7 /* QuestionsGridView.swift in Sources */,
 				D78543CA292507CE002812F7 /* QuizData.swift in Sources */,
 				D7D393ED291B271900EADEE2 /* WidthsEnum.swift in Sources */,
+				A918355F29E0BC1800442B21 /* SoundsEnum.swift in Sources */,
 				D7D393F5291B28CB00EADEE2 /* FontSizesEnum.swift in Sources */,
 				D7D393AF291B1D8300EADEE2 /* ContentView.swift in Sources */,
 				D7D39400291B2B6F00EADEE2 /* FontModifier.swift in Sources */,
@@ -461,6 +496,7 @@
 				D7D393E8291B254600EADEE2 /* Image+.swift in Sources */,
 				D7EEA889291C04E7000AC428 /* FontScaleModifier.swift in Sources */,
 				D7EEA88B291C05E2000AC428 /* ScaleableText.swift in Sources */,
+				A918355D29E0BB6C00442B21 /* SoundManager.swift in Sources */,
 				D7DF5162291C6A9F00D8A6D9 /* GameView.swift in Sources */,
 				D7D393EF291B277500EADEE2 /* HeightsEnum.swift in Sources */,
 				D7D393E3291B1EB500EADEE2 /* WelcomeView.swift in Sources */,

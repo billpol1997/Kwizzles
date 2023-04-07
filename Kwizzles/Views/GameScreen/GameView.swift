@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct GameView: View {
+    
     @ObservedObject var manager : GameViewModel
+    @State var soundState: Bool = true
+    var sound = SoundManager()
+    
     var body: some View {
         ZStack{
             Image(.KwizzlesBackground)
@@ -28,8 +32,7 @@ struct GameView: View {
             toolbar
             Spacer()
             timer
-                .customPadding(.vertical, .timerVerticalPadding)
-            Spacer()
+                .customPadding(.bottom, .timerVerticalPadding)
             QuestionsGridView(manager: manager)
         }
         .customPadding(.horizontal, .gameHorizontalPadding)
@@ -67,22 +70,52 @@ struct GameView: View {
     
     var toolbar: some View{
         HStack{
-            Group{
-                Text(String(manager.totalPoints))
-                Text("pts")
-            }
-            .customFont(.chalkBold, .smallFont)
-            .foregroundColor(Color.theme.BrightWhite)
+          soundButton
             Spacer()
-            Group{
-                Text(String(GameViewModel.currentIndex))
-                Text("/")
-                Text(String(GameViewModel.maxIndex))
+            VStack(alignment: .trailing , spacing:1){
+              questionIndex
+              points
             }
-            .customFont(.chalkBold, .smallFont)
-            .foregroundColor(Color.theme.FadeGrey)
         }
         .customPadding(.horizontal, .gameHorizontalPadding)
+    }
+    
+    var soundButton: some View {
+        Button {
+            soundState.toggle()
+        } label: {
+            ZStack{
+                Circle()
+                    .fill(soundState ? Color.theme.FadePurple : Color.theme.BrightBrown)
+                    .frame(width: 40, height: 40)
+                Image(soundState ? .soundON : .soundOFF)
+                    .resizable()
+                    .frame(width: 25, height: 25)
+            }
+           
+        }
+        .onAppear{
+            sound.playSound(sound: .backgroundMusic, val: true)
+        }
+    }
+    
+    var questionIndex: some View {
+        HStack{
+            Text(String(GameViewModel.currentIndex))
+            Text("/")
+            Text(String(GameViewModel.maxIndex))
+        }
+        .customFont(.chalkBold, .smallFont)
+        .foregroundColor(Color.theme.FadeGrey)
+    }
+    
+    var points: some View {
+        HStack{
+            Text(String(manager.totalPoints))
+            Text("pts")
+        }
+        .customFont(.chalkBold, .smallFont)
+        .foregroundColor(Color.theme.BrightWhite)
     }
 }
 

@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct BaseQuestionContainer: View {
+    
     @State var isAnswer: Bool
+    @State var isPressed: Bool = false
+    @State var action : () -> Void
+    var isCorrect: Bool?
+    var colorBoarder : Color?
     var text: String
     var level: String?
-    @State var isPressed: Bool = false
-    @State var isCorrect: Bool?
-    @State var colorBoarder : Color?
-    @State var action : () -> Void
+    var sounds = SoundManager.shared
     
     init(isAnswer: Bool, text: String, level: String? = nil ,isCorrect: Bool? = nil,colorBoarder: Color? = nil, action: @escaping () -> Void) {
         self.isAnswer = isAnswer
@@ -62,6 +64,7 @@ struct BaseQuestionContainer: View {
         Button{
             isPressed = true
             action()
+            sounds.playSound(sound: isCorrect ?? false ? .correct : .incorrect, val: false)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                 isPressed = false
             }

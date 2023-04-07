@@ -11,4 +11,6 @@ import SwiftUI
 enum AssetsEnum: String{
     case KwizzlesBackground
     case KwizzlesLogo
+    case soundON
+    case soundOFF
 }
