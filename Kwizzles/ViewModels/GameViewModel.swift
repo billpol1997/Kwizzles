@@ -68,6 +68,10 @@ class GameViewModel : ObservableObject {
         self.startTimer()
     }
     
+    func isEndOfCounter() -> Bool {
+        return self.progress == self.maxProgress
+    }
+    
     func nextQ(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if (GameViewModel.currentIndex < 19  ) {             // max thesi - 1 gia na doulepsei, QuizData.count - 1,quiz().data.count - 1

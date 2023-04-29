@@ -51,7 +51,7 @@ struct GameView: View {
                 .stroke(LinearGradient(colors: [Color.theme.BrightBrown, Color.theme.BrightWhite], startPoint: .topLeading, endPoint: .bottomTrailing),
                         style: StrokeStyle(lineWidth: 9,lineCap: .round,lineJoin: .round))
                 .rotationEffect(Angle(degrees: 270))
-                .animation(Animation.linear(duration: Double(manager.maxProgress)), value: manager.progress)
+                .animation(Animation.linear(duration: Double(manager.maxProgress)), value: manager.isEndOfCounter() ? 0 : manager.progress)
             
             Text(String(manager.progress))
                 .customFont(.chalkBold, .mediumFont)
