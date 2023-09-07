@@ -10,21 +10,19 @@ import Foundation
 
 struct QuestionsGridView : View{
     
-    var manager : GameViewModel
+    @ObservedObject var viewModel : GameViewModel
     var columns : [GridItem] = Array(repeating: GridItem(.fixed(190),spacing: 0), count: 2)
     @State var text : String = " "
     
     var body: some View{
-        
-        
         VStack {
             question
            
             Spacer()
             LazyVGrid(columns: columns , spacing: 20){
-                ForEach(manager.model.quizModel.optionsList){ quizOption in
-                    BaseQuestionContainer(isAnswer: true, text: quizOption.option, isCorrect: quizOption.optionId == manager.model.quizModel.answer, action: {
-                        manager.verifyAnswer(selectedOption: quizOption)
+                ForEach(viewModel.model.quizModel.optionsList){ quizOption in
+                    BaseQuestionContainer(isAnswer: true, text: quizOption.option, isCorrect: quizOption.optionId == viewModel.model.quizModel.answer, action: {
+                        viewModel.verifyAnswer(selectedOption: quizOption)
                     })
                 }
             }
@@ -33,6 +31,6 @@ struct QuestionsGridView : View{
     }
     
     var question: some View{
-        BaseQuestionContainer(isAnswer: false, text: manager.model.quizModel.question, level: manager.model.quizModel.level,action: {})
+        BaseQuestionContainer(isAnswer: false, text: viewModel.model.quizModel.question, level: viewModel.model.quizModel.level,action: {})
     }
 }

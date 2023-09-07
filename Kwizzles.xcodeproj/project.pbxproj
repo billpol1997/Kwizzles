@@ -17,6 +17,7 @@
 		A9653D8729BD14620029FDAF /* KwizzlesQnA1.json in Resources */ = {isa = PBXBuildFile; fileRef = A9653D8629BD14620029FDAF /* KwizzlesQnA1.json */; };
 		A9653D8929BD14B60029FDAF /* QnAResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9653D8829BD14B60029FDAF /* QnAResponse.swift */; };
 		A9653D8C29BD16870029FDAF /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9653D8B29BD16870029FDAF /* QuizManager.swift */; };
+		A9751AC42AAA5155002D2882 /* Kwizzles2.0.json in Resources */ = {isa = PBXBuildFile; fileRef = A9751AC32AAA5155002D2882 /* Kwizzles2.0.json */; };
 		D757346E291C121C00A177C4 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D757346D291C121C00A177C4 /* WelcomeViewModel.swift */; };
 		D78543C529250469002812F7 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78543C429250469002812F7 /* QuizModel.swift */; };
 		D78543C729250671002812F7 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78543C629250671002812F7 /* GameViewModel.swift */; };
@@ -81,6 +82,7 @@
 		A9653D8629BD14620029FDAF /* KwizzlesQnA1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KwizzlesQnA1.json; sourceTree = "<group>"; };
 		A9653D8829BD14B60029FDAF /* QnAResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAResponse.swift; sourceTree = "<group>"; };
 		A9653D8B29BD16870029FDAF /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
+		A9751AC32AAA5155002D2882 /* Kwizzles2.0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Kwizzles2.0.json; sourceTree = "<group>"; };
 		D757346D291C121C00A177C4 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		D78543C429250469002812F7 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		D78543C629250671002812F7 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		D78543C8292507A0002812F7 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A9751AC32AAA5155002D2882 /* Kwizzles2.0.json */,
 				A918355129E0BAA900442B21 /* Sounds */,
 				A9653D8629BD14620029FDAF /* KwizzlesQnA1.json */,
 				D78543C9292507CE002812F7 /* QuizData.swift */,
@@ -453,6 +456,7 @@
 				D7D393B1291B1D8500EADEE2 /* Assets.xcassets in Resources */,
 				A918355B29E0BB2500442B21 /* tik.mp3 in Resources */,
 				A918355729E0BB2500442B21 /* correct.mp3 in Resources */,
+				A9751AC42AAA5155002D2882 /* Kwizzles2.0.json in Resources */,
 				A918355A29E0BB2500442B21 /* tada.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
