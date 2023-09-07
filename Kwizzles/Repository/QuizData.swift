@@ -36,6 +36,46 @@ class QuizData {
         }
         return randomQuestions
     }
+    
+    func fetchQuestionBasedOnLevel(with level: GameLevels) -> [QuizModel] {
+        var questions: [QuizModel] = []
+        let levelArray = data.filter { model in
+            model.level == level.rawValue
+        }
+        
+        while questions.count < 20 {
+            let randomIndex = Int(arc4random_uniform(UInt32(levelArray.count)))
+            questions.append(levelArray[randomIndex])
+        }
+
+        return questions
+    }
+    
+    func presentQuestionList(with level: GameLevels) -> [QuizModel] {
+        var begginersQ: [QuizModel] = []
+        var intermediateQ: [QuizModel] = []
+        var proQ: [QuizModel] = []
+        var masterQ: [QuizModel] = []
+        var questions: [QuizModel] = []
+        
+        begginersQ.append(contentsOf: fetchQuestionBasedOnLevel(with: .beginner))
+        intermediateQ.append(contentsOf: fetchQuestionBasedOnLevel(with: .intermediate))
+        proQ.append(contentsOf: fetchQuestionBasedOnLevel(with: .pro))
+        masterQ.append(contentsOf: fetchQuestionBasedOnLevel(with: .master))
+        
+        switch level {
+        case .beginner:
+            questions = begginersQ
+        case .intermediate:
+            questions = intermediateQ
+        case .pro:
+            questions = proQ
+        case .master:
+            questions = masterQ
+        }
+        
+        return questions
+    }
 }
 
 

@@ -33,7 +33,7 @@ struct GameView: View {
             Spacer()
             timer
                 .customPadding(.bottom, .timerVerticalPadding)
-            QuestionsGridView(manager: manager)
+            QuestionsGridView(viewModel: manager)
         }
         .customPadding(.horizontal, .gameHorizontalPadding)
         .customPadding(.vertical, .gameVerticalPadding)
@@ -111,7 +111,7 @@ struct GameView: View {
     
     var points: some View {
         HStack{
-            Text(String(manager.totalPoints))
+            Text(String(manager.earnedPoints))
             Text("pts")
         }
         .customFont(.chalkBold, .smallFont)

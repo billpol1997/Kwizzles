@@ -37,7 +37,7 @@ struct ScoreView: View {
             Text(.score)
                 .customFont(.chalkBold, .bigFont)
                 .foregroundColor(Color.theme.BrightBrown)
-            ScaleableText(String(manager.totalPoints),isAnimating: $isAnimating)
+            ScaleableText(String(manager.earnedPoints),isAnimating: $isAnimating)
                 .customFont(.chalkBold, .hugeFont)
                 .foregroundColor(Color.theme.BrightBrown)
             Spacer()

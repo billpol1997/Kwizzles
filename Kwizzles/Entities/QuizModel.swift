@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation
 
 
-struct Quiz{
+struct Quiz {
     
     var currentQuestionIndex: Int
     var quizModel: QuizModel
@@ -25,6 +25,7 @@ struct QuizModel{
     var optionsList : [QuizOption]
     var points : Int
     var level : String
+    var isUsed: Bool
     
     init(with data: QuizJsonData) {
         self.question = data.question ?? ""
@@ -39,7 +40,7 @@ struct QuizModel{
         }) ?? []
         self.points = data.points
         self.level = data.level ?? ""
-
+        self.isUsed = false
     }
     
 }
