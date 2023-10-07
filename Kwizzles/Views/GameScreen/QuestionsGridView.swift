@@ -19,6 +19,7 @@ struct QuestionsGridView : View{
             question
            
             Spacer()
+            
             LazyVGrid(columns: columns , spacing: 20){
                 ForEach(viewModel.model.quizModel.optionsList){ quizOption in
                     BaseQuestionContainer(isAnswer: true, text: quizOption.option, isCorrect: quizOption.optionId == viewModel.model.quizModel.answer, action: {

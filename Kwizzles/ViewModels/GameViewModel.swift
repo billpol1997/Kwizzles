@@ -91,7 +91,8 @@ class GameViewModel : ObservableObject {
     
     //MARK: Next question
     func nextQ(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            guard let self else { return }
             if (GameViewModel.currentIndex < 19  ) {             // max thesi - 1 gia na doulepsei, QuizData.count - 1,quiz().data.count - 1
                 GameViewModel.currentIndex = GameViewModel.currentIndex + 1
                 self.levelIndex = self.levelIndex + 1

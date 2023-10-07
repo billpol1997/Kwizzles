@@ -53,7 +53,7 @@ struct WelcomeView: View {
     var pressPlay: some View{
         VStack{
             HStack{
-                ScaleableText("Press Play to Start", cycle: true,isAnimating: $isPressAnimated)
+                ScaleableText("Press Play to Start", cycle: false,isAnimating: $isPressAnimated)
                     .customFont(.impact, .mediumMaxFont)
                     .foregroundColor(Color.theme.BrightWhite)
             }

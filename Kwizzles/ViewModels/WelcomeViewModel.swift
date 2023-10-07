@@ -14,7 +14,8 @@ public final class WelcomeViewModel: ObservableObject{
     
     func fakeNetworkCall(){
         isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            guard let self else { return }
             self.isLoading = false
             self.isLinkActive = true
         }

@@ -25,6 +25,9 @@ struct GameView: View {
             }
         }
         .navigationBarHidden(true)
+        .onAppear{
+         sound.playSound(sound: .backgroundMusic, val: true)
+        }
     }
     
     var gameContent: some View{
@@ -70,11 +73,11 @@ struct GameView: View {
     
     var toolbar: some View{
         HStack{
-          soundButton
+            soundButton
             Spacer()
             VStack(alignment: .trailing , spacing:1){
-              questionIndex
-              points
+                questionIndex
+                points
             }
         }
         .customPadding(.horizontal, .gameHorizontalPadding)
@@ -82,20 +85,25 @@ struct GameView: View {
     
     var soundButton: some View {
         Button {
-            soundState.toggle()
+            //  soundState.toggle()
         } label: {
             ZStack{
                 Circle()
                     .fill(soundState ? Color.theme.FadePurple : Color.theme.BrightBrown)
                     .frame(width: 40, height: 40)
-                Image(soundState ? .soundON : .soundOFF)
+                Image(soundImage)
                     .resizable()
                     .frame(width: 25, height: 25)
             }
-           
+            
         }
-        .onAppear{
-            sound.playSound(sound: .backgroundMusic, val: true)
+    }
+    
+    var soundImage: AssetsEnum {
+        if soundState {
+            return .soundON
+        } else {
+            return .soundOFF
         }
     }
     

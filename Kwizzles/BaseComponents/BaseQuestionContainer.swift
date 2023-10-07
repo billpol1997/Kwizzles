@@ -64,8 +64,8 @@ struct BaseQuestionContainer: View {
         Button{
             isPressed = true
             action()
-            sounds.playSound(sound: isCorrect ?? false ? .correct : .incorrect, val: false)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+            sounds.playButtonSound(sound: isCorrect ?? false ? .correct : .incorrect, val: isPressed)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 isPressed = false
             }
         }label: {
