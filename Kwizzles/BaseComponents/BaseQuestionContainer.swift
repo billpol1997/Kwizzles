@@ -32,7 +32,7 @@ struct BaseQuestionContainer: View {
     }
     
     @ViewBuilder
-    var container: some View{
+    var container: some View {
         if isAnswer{
             answer
         }else{
@@ -40,8 +40,8 @@ struct BaseQuestionContainer: View {
         }
     }
     
-    var question: some View{
-        VStack(alignment: .center){
+    var question: some View {
+        VStack(alignment: .center) {
             Text(level ?? "")
                 .customFont(.impact, .mediumFont)
                 .foregroundStyle(LinearGradient(colors: [.white,Color.theme.FadeGrey], startPoint: .top, endPoint: .bottom))
@@ -50,7 +50,6 @@ struct BaseQuestionContainer: View {
                 .foregroundColor(.white)
                 .customPadding(.top, .questionContainerMiddlePadding)
             Spacer()
-                
         }
         .customPadding(.vertical, .questionContainerVerticalPadding)
         .customPadding(.horizontal, .questionContainerHorizontalPadding)
@@ -60,7 +59,7 @@ struct BaseQuestionContainer: View {
             .stroke(Color.theme.BoarderBrown,lineWidth: 4))
     }
     
-    var answer: some View{
+    var answer: some View {
         Button{
             isPressed = true
             action()
@@ -69,14 +68,14 @@ struct BaseQuestionContainer: View {
                 isPressed = false
             }
         }label: {
-            HStack{
+            HStack {
                 Text(text)
                     .customFont(.arial, .smallFont)
                     .foregroundColor(.white)
                     .frame(width: CGFloat(.answerWidth),height: CGFloat(.answerHeight),alignment: .center)
                     .background(RoundedRectangle(cornerRadius: CGFloat(.answerRadius)).fill(Color.theme.FadePurple))
                     .overlay(RoundedRectangle(cornerRadius: CGFloat(.answerRadius))
-                        .stroke(isPressed ? isCorrect ?? false ? .green : .red : .clear,lineWidth: 2))
+                        .stroke(isPressed ? ((isCorrect ?? false) ? .green : .red) : .clear, lineWidth: 2))
             }
         }
     }

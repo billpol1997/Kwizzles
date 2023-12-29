@@ -17,23 +17,25 @@ enum GameLevels: String {
 
 class GameViewModel : ObservableObject {
     
-    typealias quiz = QuizData
+    typealias quiz = QuizDataFactory
     
     //MARK: Vars
     static var currentIndex = 0
     static var maxIndex = 20
     @State var pressed : Bool = false
     @State var timeRunning = false
-    var levelPoints : Int = 0
-    var totalLevelPoints : Int = 0
+    var levelPoints : CGFloat = 0.0
+    var totalLevelPoints : CGFloat = 0.0
     var currentLevel: GameLevels
     var levelIndex: Int = 0
     @Published var earnedPoints : Int = 0
     @Published var hasChangedLevel = false
+    var islevelUp: Bool = false
 
     //MARK: Create game
     static func createGameModel(i:Int, level: GameLevels? = .beginner) -> Quiz {
-        return Quiz(currentQuestionIndex: i, quizModel: quiz().presentQuestionList(with: level ?? .beginner )[i]) // QuizData[i]
+       // return Quiz(currentQuestionIndex: i, quizModel: quiz().presentQuestionList(with: level ?? .beginner )[i]) // QuizData[i]
+        return Quiz(currentQuestionIndex: i, quizModel: quiz().fetchNextQuestion(with: level ?? .beginner))
     }
     
     @Published var model = GameViewModel.createGameModel(i: GameViewModel.currentIndex)
@@ -91,18 +93,13 @@ class GameViewModel : ObservableObject {
     
     //MARK: Next question
     func nextQ(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.25) { [weak self] in
             guard let self else { return }
             if (GameViewModel.currentIndex < 19  ) {             // max thesi - 1 gia na doulepsei, QuizData.count - 1,quiz().data.count - 1
                 GameViewModel.currentIndex = GameViewModel.currentIndex + 1
                 self.levelIndex = self.levelIndex + 1
-                self.adjustLevel()
                 self.resetTimer()
-                guard !self.hasChangedLevel else {
-                    self.model = GameViewModel.createGameModel(i: GameViewModel.currentIndex, level: self.currentLevel)
-                    return
-                }
-                self.model = GameViewModel.createGameModel(i: GameViewModel.currentIndex)
+                self.model = GameViewModel.createGameModel(i: GameViewModel.currentIndex, level: self.currentLevel)
             } else {
                 self.model.quizCompleted = true
                 //self.model.quizWinningStatus = true
@@ -110,6 +107,7 @@ class GameViewModel : ObservableObject {
             }
         }
     }
+    
     //MARK: Verify
     func verifyAnswer(selectedOption: QuizOption) {
         for index in model.quizModel.optionsList.indices {
@@ -121,27 +119,48 @@ class GameViewModel : ObservableObject {
             if selectedOption.optionId ==  model.quizModel.answer {
                 model.quizModel.optionsList[index].isMatched = true
                 earnedPoints += model.quizModel.points
+                levelPoints += CGFloat(model.quizModel.points)
             } else {
                 model.quizModel.optionsList[index].isMatched = false
             }
             model.quizModel.optionsList[index].isSelected = true
-            totalLevelPoints += model.quizModel.points
+            totalLevelPoints += CGFloat(model.quizModel.points)
             pressed = true
-            nextQ()
-            
+            model.quizModel.isUsed = true
+            self.adjustLevel()
+            self.nextQ()
         }
     }
     
     //MARK: Level funcs
     func adjustLevel() {
-        guard levelIndex == 5 else { return }
-        if levelPoints  >= totalLevelPoints * Int(0.75) {
+        guard levelIndex == 4 else { return }
+        if levelPoints  >= totalLevelPoints * 0.2 {
+            guard currentLevel != .master else { return }
             self.levelUp()
+            self.islevelUp = true
         } else {
+            guard currentLevel != .beginner else { return }
             self.levelDown()
+            self.islevelUp = false
         }
-        self.hasChangedLevel = true
         self.resetLevelComponents()
+        self.resetLevelChangePopUp()
+    }
+    
+    func levelAdjustmentProcess(level: GameLevels) -> Bool {
+        var trigger: Bool = false
+        switch level {
+        case .beginner:
+            trigger = levelPoints >= totalLevelPoints * 0.4 && levelIndex == 3 // 4 qs total at least 2
+        case .intermediate:
+            trigger = levelPoints >= totalLevelPoints * 0.6 && levelIndex == 5 // 6 qs total at least 4
+        case .pro:
+            trigger = levelPoints >= totalLevelPoints * 0.7 && levelIndex == 4 // 5 qs total at least 4
+        case .master:
+            trigger = levelPoints >= totalLevelPoints * 0.7 && levelIndex == 4 // 5 qs total at least 4
+        }
+        return trigger
     }
     
     func levelUp() {
@@ -153,14 +172,15 @@ class GameViewModel : ObservableObject {
         case .pro:
             self.currentLevel = .master
         case .master:
-            self.currentLevel = .master
+            break
         }
+        self.hasChangedLevel = true
     }
     
     func levelDown() {
         switch currentLevel {
         case .beginner:
-            self.currentLevel = .beginner
+           break
         case .intermediate:
             self.currentLevel = .beginner
         case .pro:
@@ -168,11 +188,20 @@ class GameViewModel : ObservableObject {
         case .master:
             self.currentLevel = .pro
         }
+        self.hasChangedLevel = true
     }
     
     func resetLevelComponents() {
         levelPoints = 0
         totalLevelPoints = 0
         levelIndex = 0
+     
+    }
+    
+    func resetLevelChangePopUp() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: { [weak self] in
+            guard let self else { return }
+            self.hasChangedLevel = false
+        })
     }
 }

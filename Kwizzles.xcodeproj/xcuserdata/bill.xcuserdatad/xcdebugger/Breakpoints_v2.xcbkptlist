@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "63D33F8A-8812-4FD2-A6D2-AC493AF9CAD0"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66F4D3AD-9B73-474E-BF62-4C89CB1FC3CF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kwizzles/ViewModels/GameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "verifyAnswer(selectedOption:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "66F4D3AD-9B73-474E-BF62-4C89CB1FC3CF - 9f533f4e7113540c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.verifyAnswer(selectedOption: Kwizzles.QuizOption) -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "1768">
+               </Location>
+               <Location
+                  uuid = "66F4D3AD-9B73-474E-BF62-4C89CB1FC3CF - 9f533f4e7113542b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.verifyAnswer(selectedOption: Kwizzles.QuizOption) -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "1884">
+               </Location>
+               <Location
+                  uuid = "66F4D3AD-9B73-474E-BF62-4C89CB1FC3CF - 9f533f4e71135590"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.verifyAnswer(selectedOption: Kwizzles.QuizOption) -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "1884">
+               </Location>
+               <Location
+                  uuid = "66F4D3AD-9B73-474E-BF62-4C89CB1FC3CF - 9f533f4e711355af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.verifyAnswer(selectedOption: Kwizzles.QuizOption) -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "1888">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74CB0008-7053-4427-B281-2F425FE92E63"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kwizzles/ViewModels/GameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "verifyAnswer(selectedOption:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "74CB0008-7053-4427-B281-2F425FE92E63 - 9f533f4e711354e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.verifyAnswer(selectedOption: Kwizzles.QuizOption) -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "2076">
+               </Location>
+               <Location
+                  uuid = "74CB0008-7053-4427-B281-2F425FE92E63 - 9f533f4e7113544e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.verifyAnswer(selectedOption: Kwizzles.QuizOption) -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "2076">
+               </Location>
+               <Location
+                  uuid = "74CB0008-7053-4427-B281-2F425FE92E63 - 9f533f4e7113540c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.verifyAnswer(selectedOption: Kwizzles.QuizOption) -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "2132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "686E8EDF-62FE-4992-91E5-A4C5A269D617"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kwizzles/ViewModels/GameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "adjustLevel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "686E8EDF-62FE-4992-91E5-A4C5A269D617 - 3fa3e51270bbeb49"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.adjustLevel() -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "686E8EDF-62FE-4992-91E5-A4C5A269D617 - 3fa3e51270bbec2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.adjustLevel() -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "686E8EDF-62FE-4992-91E5-A4C5A269D617 - 3fa3e51270bbebee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.adjustLevel() -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B114E7F-F924-4B42-8F2B-DB7544ED50AB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kwizzles/ViewModels/GameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "levelUp()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1B114E7F-F924-4B42-8F2B-DB7544ED50AB - 9f4683281be66fb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.levelUp() -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "1B114E7F-F924-4B42-8F2B-DB7544ED50AB - 9f4683281be66f36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.levelUp() -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "1B114E7F-F924-4B42-8F2B-DB7544ED50AB - 9f4683281be66cd9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.levelUp() -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "1B114E7F-F924-4B42-8F2B-DB7544ED50AB - 9f4683281be66f17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.levelUp() -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD9F7F38-F69C-4B42-8AAC-3A223F9ABC5D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kwizzles/Repository/QuizData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "QuizDataManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

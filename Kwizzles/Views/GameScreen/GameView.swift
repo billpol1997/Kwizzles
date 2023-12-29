@@ -24,6 +24,9 @@ struct GameView: View {
                 gameContent
             }
         }
+        .overlay(alignment: .top) {
+            levelPopUp
+        }
         .navigationBarHidden(true)
         .onAppear{
          sound.playSound(sound: .backgroundMusic, val: true)
@@ -81,6 +84,18 @@ struct GameView: View {
             }
         }
         .customPadding(.horizontal, .gameHorizontalPadding)
+    }
+    
+    @ViewBuilder
+    var levelPopUp: some View {
+        if manager.hasChangedLevel {
+            HStack {
+                Spacer()
+                LevelPopUpView(level: manager.model.quizModel.level, isLevelUp: manager.islevelUp)
+                Spacer()
+            }
+            .animation(.linear)
+        }
     }
     
     var soundButton: some View {

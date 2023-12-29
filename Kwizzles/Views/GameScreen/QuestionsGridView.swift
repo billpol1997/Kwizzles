@@ -32,6 +32,6 @@ struct QuestionsGridView : View{
     }
     
     var question: some View{
-        BaseQuestionContainer(isAnswer: false, text: viewModel.model.quizModel.question, level: viewModel.model.quizModel.level,action: {})
+        BaseQuestionContainer(isAnswer: false, text: viewModel.model.quizModel.question, level: viewModel.model.quizModel.level, action: {})
     }
 }

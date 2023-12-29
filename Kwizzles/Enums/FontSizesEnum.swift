@@ -7,16 +7,19 @@
 
 import SwiftUI
 
-enum FontSizesEnum{
+enum FontSizesEnum {
     case maxFont
     case hugeFont
     case mediumFont
     case mediumMaxFont
     case bigFont
     case smallFont
+    case tinyFont
     
-    var size: CGFloat{
-        switch self{
+    var size: CGFloat {
+        switch self {
+        case .tinyFont:
+            return 15
         case .smallFont:
             return 18
         case .maxFont:

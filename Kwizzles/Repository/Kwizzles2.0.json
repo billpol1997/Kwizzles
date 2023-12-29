@@ -196,8 +196,8 @@
             "level": "beginner"
         },
         {
-            "question": "What is the longest river in the world?",
-            "answer": "B",
+            "question": "Which river is located in Egypt?",
+            "answer": "A",
             "options": [
                 {
                     "id": 0,
@@ -1148,8 +1148,8 @@
             "level": "master"
         },
         {
-            "question": "What is the highest mountain peak in the world?",
-            "answer": "D",
+            "question": "Which mountain is located in Tanzania?",
+            "answer": "A",
             "options": [
                 {
                     "id": 0,
@@ -1254,6 +1254,90 @@
                     "id": 3,
                     "optionId": "D",
                     "option": "Cairo"
+                }
+            ],
+            "points": 10,
+            "level": "beginner"
+        },
+        {
+            "question": "Where tzatziki sauce originated?",
+            "answer": "C",
+            "options": [
+                {
+                    "id": 0,
+                    "optionId": "A",
+                    "option": "Spain"
+                },
+                {
+                    "id": 1,
+                    "optionId": "B",
+                    "option": "Rome"
+                },
+                {
+                    "id": 2,
+                    "optionId": "C",
+                    "option": "Greece"
+                },
+                {
+                    "id": 3,
+                    "optionId": "D",
+                    "option": "Cairo"
+                }
+            ],
+            "points": 10,
+            "level": "beginner"
+        },
+        {
+            "question": "Where is HollyWood located?",
+            "answer": "A",
+            "options": [
+                {
+                    "id": 0,
+                    "optionId": "A",
+                    "option": "LA"
+                },
+                {
+                    "id": 1,
+                    "optionId": "B",
+                    "option": "Rome"
+                },
+                {
+                    "id": 2,
+                    "optionId": "C",
+                    "option": "Pisa"
+                },
+                {
+                    "id": 3,
+                    "optionId": "D",
+                    "option": "Cairo"
+                }
+            ],
+            "points": 10,
+            "level": "beginner"
+        },
+        {
+            "question": "In which country in ancient times the king called Pharaoh?",
+            "answer": "D",
+            "options": [
+                {
+                    "id": 0,
+                    "optionId": "A",
+                    "option": "China"
+                },
+                {
+                    "id": 1,
+                    "optionId": "B",
+                    "option": "Italy"
+                },
+                {
+                    "id": 2,
+                    "optionId": "C",
+                    "option": "Creece"
+                },
+                {
+                    "id": 3,
+                    "optionId": "D",
+                    "option": "Egypt"
                 }
             ],
             "points": 10,
@@ -1920,7 +2004,7 @@
                 {
                     "id": 2,
                     "optionId": "C",
-                    "option": "Santo domingo"
+                    "option": "Santo dominico"
                 },
                 {
                     "id": 3,

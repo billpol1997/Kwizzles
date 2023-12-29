@@ -32,8 +32,8 @@ struct QuizModel{
         self.answer = data.answer ?? ""
         self.optionsList = data.options.map({ items -> [QuizOption] in
             var tempArray: [QuizOption]
-            tempArray = items.map{ item -> QuizOption in
-                var temp: QuizOption =  QuizOption(with: item)
+            tempArray = items.map { item -> QuizOption in
+                let temp: QuizOption =  QuizOption(with: item)
                 return temp
             }
             return tempArray
