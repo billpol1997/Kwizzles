@@ -8,14 +8,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "66F4D3AD-9B73-474E-BF62-4C89CB1FC3CF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kwizzles/ViewModels/GameViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "verifyAnswer(selectedOption:)"
             landmarkType = "7">
             <Locations>
@@ -79,6 +79,21 @@
                   endingLineNumber = "126"
                   offsetFromSymbolStart = "1888">
                </Location>
+               <Location
+                  uuid = "66F4D3AD-9B73-474E-BF62-4C89CB1FC3CF - 9f533f4e711354a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.verifyAnswer(selectedOption: Kwizzles.QuizOption) -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "1888">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -92,8 +107,8 @@
             filePath = "Kwizzles/ViewModels/GameViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "verifyAnswer(selectedOption:)"
             landmarkType = "7">
             <Locations>
@@ -142,68 +157,20 @@
                   endingLineNumber = "129"
                   offsetFromSymbolStart = "2132">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "686E8EDF-62FE-4992-91E5-A4C5A269D617"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kwizzles/ViewModels/GameViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "adjustLevel()"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "686E8EDF-62FE-4992-91E5-A4C5A269D617 - 3fa3e51270bbeb49"
+                  uuid = "74CB0008-7053-4427-B281-2F425FE92E63 - 9f533f4e71135304"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Kwizzles.GameViewModel.adjustLevel() -&gt; ()"
+                  symbolName = "Kwizzles.GameViewModel.verifyAnswer(selectedOption: Kwizzles.QuizOption) -&gt; ()"
                   moduleName = "Kwizzles"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  uuid = "686E8EDF-62FE-4992-91E5-A4C5A269D617 - 3fa3e51270bbec2c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Kwizzles.GameViewModel.adjustLevel() -&gt; ()"
-                  moduleName = "Kwizzles"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  uuid = "686E8EDF-62FE-4992-91E5-A4C5A269D617 - 3fa3e51270bbebee"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Kwizzles.GameViewModel.adjustLevel() -&gt; ()"
-                  moduleName = "Kwizzles"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "76">
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "2132">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -218,8 +185,8 @@
             filePath = "Kwizzles/ViewModels/GameViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "levelUp()"
             landmarkType = "7">
             <Locations>
@@ -283,6 +250,21 @@
                   endingLineNumber = "151"
                   offsetFromSymbolStart = "60">
                </Location>
+               <Location
+                  uuid = "1B114E7F-F924-4B42-8F2B-DB7544ED50AB - 9f4683281be6626f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.levelUp() -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "191"
+                  endingLineNumber = "191"
+                  offsetFromSymbolStart = "60">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -300,6 +282,38 @@
             endingLineNumber = "62"
             landmarkName = "QuizDataManager"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5ECD8DBC-2745-4AAA-A9EA-051F4A327F3D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kwizzles/ViewModels/GameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "levelAdjustmentProcess(level:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF44E97A-5811-40B9-90EA-266DF279D10D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kwizzles/ViewModels/GameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "innerLevelPointSystemProcess(minPoints:maxPoints:trigger:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

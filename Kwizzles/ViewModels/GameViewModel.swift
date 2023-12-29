@@ -15,6 +15,12 @@ enum GameLevels: String {
     case master
 }
 
+enum LevelAdjustmentState {
+    case up
+    case down
+    case none
+}
+
 class GameViewModel : ObservableObject {
     
     typealias quiz = QuizDataFactory
@@ -24,17 +30,17 @@ class GameViewModel : ObservableObject {
     static var maxIndex = 20
     @State var pressed : Bool = false
     @State var timeRunning = false
+    @Published var earnedPoints : Int = 0
+    @Published var hasChangedLevel = false
     var levelPoints : CGFloat = 0.0
     var totalLevelPoints : CGFloat = 0.0
     var currentLevel: GameLevels
     var levelIndex: Int = 0
-    @Published var earnedPoints : Int = 0
-    @Published var hasChangedLevel = false
     var islevelUp: Bool = false
-
+    
     //MARK: Create game
     static func createGameModel(i:Int, level: GameLevels? = .beginner) -> Quiz {
-       // return Quiz(currentQuestionIndex: i, quizModel: quiz().presentQuestionList(with: level ?? .beginner )[i]) // QuizData[i]
+        // return Quiz(currentQuestionIndex: i, quizModel: quiz().presentQuestionList(with: level ?? .beginner )[i]) // QuizData[i]
         return Quiz(currentQuestionIndex: i, quizModel: quiz().fetchNextQuestion(with: level ?? .beginner))
     }
     
@@ -54,10 +60,10 @@ class GameViewModel : ObservableObject {
     func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats:true, block: { time in
             if self.progress == self.maxProgress {
-//                self.model.quizCompleted = true
-//                self.model.quizWinningStatus = false
+                //                self.model.quizCompleted = true
+                //                self.model.quizWinningStatus = false
                 self.nextQ()
-               // self.resetTimer()
+                // self.resetTimer()
             } else {
                 self.progress += 1
             }
@@ -134,33 +140,48 @@ class GameViewModel : ObservableObject {
     
     //MARK: Level funcs
     func adjustLevel() {
-        guard levelIndex == 4 else { return }
-        if levelPoints  >= totalLevelPoints * 0.2 {
+        switch levelAdjustmentProcess(level: self.currentLevel) {
+        case .up:
             guard currentLevel != .master else { return }
             self.levelUp()
             self.islevelUp = true
-        } else {
+        case .down:
             guard currentLevel != .beginner else { return }
             self.levelDown()
             self.islevelUp = false
+        case .none:
+            return
         }
         self.resetLevelComponents()
         self.resetLevelChangePopUp()
     }
     
-    func levelAdjustmentProcess(level: GameLevels) -> Bool {
-        var trigger: Bool = false
+    func levelAdjustmentProcess(level: GameLevels) -> LevelAdjustmentState {
         switch level {
         case .beginner:
-            trigger = levelPoints >= totalLevelPoints * 0.4 && levelIndex == 3 // 4 qs total at least 2
+            return self.innerLevelPointSystemProcess(minPoints: 0.0, maxPoints: totalLevelPoints * 0.33, trigger: levelIndex == 2)
+            // 4 qs total at least 2
         case .intermediate:
-            trigger = levelPoints >= totalLevelPoints * 0.6 && levelIndex == 5 // 6 qs total at least 4
+            return self.innerLevelPointSystemProcess(minPoints: totalLevelPoints * 0.65, maxPoints: totalLevelPoints * 0.7, trigger: levelIndex == 2)
+            // 6 qs total at least 3
         case .pro:
-            trigger = levelPoints >= totalLevelPoints * 0.7 && levelIndex == 4 // 5 qs total at least 4
+            return self.innerLevelPointSystemProcess(minPoints: totalLevelPoints * 0.75, maxPoints: totalLevelPoints * 0.8, trigger: levelIndex == 2)
+            // 5 qs total at least 4
         case .master:
-            trigger = levelPoints >= totalLevelPoints * 0.7 && levelIndex == 4 // 5 qs total at least 4
+            return self.innerLevelPointSystemProcess(minPoints: totalLevelPoints * 0.85, maxPoints: 1000000.0, trigger: levelIndex == 1)
+            // 5 qs total at least 4
         }
-        return trigger
+    }
+    
+    func innerLevelPointSystemProcess( minPoints: CGFloat, maxPoints: CGFloat, trigger: Bool) -> LevelAdjustmentState {
+        guard trigger else { return .none }
+        if CGFloat(earnedPoints) <= minPoints {
+            return .down
+        } else if CGFloat(earnedPoints) >= maxPoints {
+            return .up
+        } else {
+            return .none
+        }
     }
     
     func levelUp() {
@@ -180,7 +201,7 @@ class GameViewModel : ObservableObject {
     func levelDown() {
         switch currentLevel {
         case .beginner:
-           break
+            break
         case .intermediate:
             self.currentLevel = .beginner
         case .pro:
@@ -193,9 +214,8 @@ class GameViewModel : ObservableObject {
     
     func resetLevelComponents() {
         levelPoints = 0
-        totalLevelPoints = 0
+        //totalLevelPoints = 0
         levelIndex = 0
-     
     }
     
     func resetLevelChangePopUp() {

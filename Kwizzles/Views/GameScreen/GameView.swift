@@ -124,7 +124,7 @@ struct GameView: View {
     
     var questionIndex: some View {
         HStack{
-            Text(String(GameViewModel.currentIndex))
+            Text(String(GameViewModel.currentIndex + 1))
             Text("/")
             Text(String(GameViewModel.maxIndex))
         }
