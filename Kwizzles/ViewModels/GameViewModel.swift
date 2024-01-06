@@ -159,17 +159,13 @@ class GameViewModel : ObservableObject {
     func levelAdjustmentProcess(level: GameLevels) -> LevelAdjustmentState {
         switch level {
         case .beginner:
-            return self.innerLevelPointSystemProcess(minPoints: 0.0, maxPoints: totalLevelPoints * 0.33, trigger: levelIndex == 2)
-            // 4 qs total at least 2
+            return self.innerLevelPointSystemProcess(minPoints: 0.0, maxPoints: totalLevelPoints * 0.33, trigger: levelIndex == 3)
         case .intermediate:
-            return self.innerLevelPointSystemProcess(minPoints: totalLevelPoints * 0.65, maxPoints: totalLevelPoints * 0.7, trigger: levelIndex == 2)
-            // 6 qs total at least 3
+            return self.innerLevelPointSystemProcess(minPoints: totalLevelPoints * 0.6, maxPoints: totalLevelPoints * 0.7, trigger: levelIndex == 2)
         case .pro:
             return self.innerLevelPointSystemProcess(minPoints: totalLevelPoints * 0.75, maxPoints: totalLevelPoints * 0.8, trigger: levelIndex == 2)
-            // 5 qs total at least 4
         case .master:
             return self.innerLevelPointSystemProcess(minPoints: totalLevelPoints * 0.85, maxPoints: 1000000.0, trigger: levelIndex == 1)
-            // 5 qs total at least 4
         }
     }
     

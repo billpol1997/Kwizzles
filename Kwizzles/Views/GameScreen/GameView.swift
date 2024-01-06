@@ -11,7 +11,7 @@ struct GameView: View {
     
     @ObservedObject var manager : GameViewModel
     @State var soundState: Bool = true
-    var sound = SoundManager()
+    var sound = SoundManager.shared
     
     var body: some View {
         ZStack{
@@ -28,9 +28,6 @@ struct GameView: View {
             levelPopUp
         }
         .navigationBarHidden(true)
-        .onAppear{
-         sound.playSound(sound: .backgroundMusic, val: true)
-        }
     }
     
     var gameContent: some View{
@@ -43,6 +40,12 @@ struct GameView: View {
         }
         .customPadding(.horizontal, .gameHorizontalPadding)
         .customPadding(.vertical, .gameVerticalPadding)
+        .onAppear{
+         sound.playSound(sound: .backgroundMusic, val: true)
+        }
+        .onChange(of: soundState) { newValue in
+            sound.playSound(sound: .backgroundMusic, val: newValue)
+        }
     }
     
     var timer : some View{
@@ -63,6 +66,11 @@ struct GameView: View {
                 .customFont(.chalkBold, .mediumFont)
                 .foregroundColor(Color.theme.BrightWhite)
                 .opacity(0.9)
+                .onChange(of: manager.progress) { newValue in
+                    if newValue == 11 {
+                        sound.playButtonSound(sound: .tik, val: true)
+                    }
+                }
         }
         .frame(width: CGFloat(.timerWidth),height: CGFloat(.timerHeight))
     }
@@ -100,7 +108,7 @@ struct GameView: View {
     
     var soundButton: some View {
         Button {
-            //  soundState.toggle()
+          soundState.toggle()
         } label: {
             ZStack{
                 Circle()

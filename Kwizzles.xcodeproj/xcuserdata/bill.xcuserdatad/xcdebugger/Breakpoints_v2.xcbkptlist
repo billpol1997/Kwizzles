@@ -172,6 +172,21 @@
                   endingLineNumber = "137"
                   offsetFromSymbolStart = "2132">
                </Location>
+               <Location
+                  uuid = "74CB0008-7053-4427-B281-2F425FE92E63 - 9f533f4e71135365"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.verifyAnswer(selectedOption: Kwizzles.QuizOption) -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "2132">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -185,8 +200,8 @@
             filePath = "Kwizzles/ViewModels/GameViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "levelUp()"
             landmarkType = "7">
             <Locations>
@@ -265,6 +280,21 @@
                   endingLineNumber = "191"
                   offsetFromSymbolStart = "60">
                </Location>
+               <Location
+                  uuid = "1B114E7F-F924-4B42-8F2B-DB7544ED50AB - 9f4683281be66354"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kwizzles.GameViewModel.levelUp() -&gt; ()"
+                  moduleName = "Kwizzles"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/Kwizzles/Kwizzles/ViewModels/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "60">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -310,10 +340,26 @@
             filePath = "Kwizzles/ViewModels/GameViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "innerLevelPointSystemProcess(minPoints:maxPoints:trigger:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCAC84C1-7E28-4E63-9772-68CB0FFF5537"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kwizzles/Views/GameScreen/GameView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "gameContent"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

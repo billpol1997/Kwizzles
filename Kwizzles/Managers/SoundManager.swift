@@ -12,18 +12,22 @@ import SwiftUI
 final class SoundManager {
     
     static let shared = SoundManager()
-    var player: AVAudioPlayer?
-    var playerButton: AVAudioPlayer?
+    var player = AVAudioPlayer()
+    var playerButton = AVAudioPlayer()
     
-    func playSound(sound: SoundsEnum, val: Bool ) {
+    init() {}
+    
+    func playSound(sound: SoundsEnum, val: Bool , loops: Int? = -1) {
         
         guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: ".mp3") else { return }
         
         do {
             player = try AVAudioPlayer(contentsOf: url)
-            player?.play()
+            player.prepareToPlay()
+            player.play()
+            player.numberOfLoops = loops ?? -1
             if !val {
-                player?.stop()
+                player.stop()
             }
         } catch let error {
             print(error.localizedDescription)
@@ -36,9 +40,9 @@ final class SoundManager {
         
         do {
             playerButton = try AVAudioPlayer(contentsOf: url)
-            playerButton?.play()
+            playerButton.play()
             if !val {
-                playerButton?.stop()
+                playerButton.stop()
             }
         } catch let error {
             print(error.localizedDescription)

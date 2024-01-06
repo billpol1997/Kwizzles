@@ -10,12 +10,16 @@ import SwiftUI
 struct ScoreView: View {
     @State var isAnimating : Bool = false
     @ObservedObject var manager : GameViewModel
+    var sound = SoundManager.shared
     var body: some View {
         ZStack{
             Image(.KwizzlesBackground)
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
             scoreView
+        }
+        .onAppear {
+            sound.playSound(sound: .tada, val: true, loops: 0)
         }
     }
     
